@@ -1,0 +1,322 @@
+/* CSS Variables for Theming */
+:root {
+    --primary-color: #ff4757;
+    --secondary-color: #333;
+    --background-color: #f4f4f9;
+    --text-color: #333;
+    --highlight-color: #ff4757;
+    --button-hover: #e84118;
+    --transition-speed: 0.3s;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--secondary-color);
+    color: white;
+    position: fixed;
+    width: 100%;
+    padding: 15px 0;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color var(--transition-speed);
+}
+
+header.scrolled {
+    background-color: rgba(51, 51, 51, 0.9);
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color var(--transition-speed);
+}
+
+.nav-list a:hover {
+    color: var(--highlight-color);
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('your-hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    animation: fadeIn 1s ease;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color var(--transition-speed);
+}
+
+.cta-button:hover {
+    background-color: var(--button-hover);
+}
+
+/* About Section */
+.about-section {
+    padding: 60px 0;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Space between boxes */
+}
+
+.box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.about-text {
+    text-align: left;
+}
+
+.about-skills {
+    text-align: left;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.skill-list li i {
+    margin-right: 10px;
+    font-size: 1.5rem; /* Icon size */
+    color: var(--primary-color); /* Primary color for the icons */
+}
+
+.experience-education {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Space between boxes */
+    margin-top: 40px;
+}
+
+.experience-item, .education-item {
+    text-align: left;
+}
+
+.experience-item h3, .education-item h3 {
+    margin-bottom: 10px;
+}
+
+
+/* Projects Section */
+.projects-section {
+    padding: 60px 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 15px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 0;
+}
+
+form {
+    display: grid;
+    gap: 15px;
+}
+
+.form-group {
+    position: relative;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color var(--transition-speed);
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.message-box {
+    margin-top: 10px;
+    color: green;
+    font-size: 1rem;
+}
+
+.message-box.hidden {
+    display: none;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: var(--secondary-color);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
+
+

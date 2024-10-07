@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Advanced modern portfolio showcasing professional projects and skills.">
+    <meta name="keywords" content="portfolio, web developer, projects, skills, frontend">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#ff4757">
+    <meta name="author" content="Your Name">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Advanced Modern Portfolio</title>
+</head>
+<body>
+    <header id="header" aria-label="Main Navigation">
+        <div class="container">
+            <h1 class="logo">My Portfolio</h1>
+            <nav aria-label="Primary Navigation">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger-menu" id="hamburger" aria-label="Toggle Navigation" tabindex="0" role="button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h2>I'm <span class="highlight">Your Name</span>, a <span class="highlight">Web Developer</span></h2>
+                <p>Creating modern, responsive, and accessible web experiences.</p>
+                <a href="#projects" class="cta-button">Explore My Work</a>
+            </div>
+        </section>
+
+        <section id="about" class="section about-section">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text box">
+                        <h3>Who I Am</h3>
+                        <p>I’m a passionate web developer with a knack for creating modern web applications that deliver seamless user experiences. My journey in web development began in [Year], and since then, I have honed my skills in various technologies.</p>
+                        <p>With a focus on responsive design and user-centered interfaces, I strive to build applications that are not only functional but also visually appealing.</p>
+                    </div>
+        
+                    <div class="about-skills box">
+                        <h3>My Skills</h3>
+                        <ul class="skill-list">
+                            <li>
+                                <i class="icon-html"></i>
+                                <span>HTML5 & CSS3</span>
+                            </li>
+                            <li>
+                                <i class="icon-js"></i>
+                                <span>JavaScript (ES6+)</span>
+                            </li>
+                            <li>
+                                <i class="icon-react"></i>
+                                <span>React & Vue.js</span>
+                            </li>
+                            <li>
+                                <i class="icon-node"></i>
+                                <span>Node.js & Express</span>
+                            </li>
+                            <li>
+                                <i class="icon-design"></i>
+                                <span>Responsive Web Design</span>
+                            </li>
+                            <li>
+                                <i class="icon-ux"></i>
+                                <span>UI/UX Principles</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="experience-education">
+                    <div class="experience-item box">
+                        <h3>Experience</h3>
+                        <p><strong>Job Title</strong> at Company Name (Year - Year)</p>
+                        <p>Brief description of your role and achievements.</p>
+                    </div>
+        
+                    <div class="education-item box">
+                        <h3>Education</h3>
+                        <p><strong>Degree</strong> in Field of Study at University Name (Year)</p>
+                        <p>Brief description of your studies and relevant projects.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <h2>Recent Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card" tabindex="0">
+                        <img src="project1.jpg" alt="Project 1 Screenshot" class="project-image">
+                        <div class="project-info">
+                            <h3>Project 1</h3>
+                            <p>A modern e-commerce platform built with React and Node.js.</p>
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card" tabindex="0">
+                        <img src="project2.jpg" alt="Project 2 Screenshot" class="project-image">
+                        <div class="project-info">
+                            <h3>Project 2</h3>
+                            <p>A portfolio website using Vue.js and Tailwind CSS.</p>
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card" tabindex="0">
+                        <img src="project3.jpg" alt="Project 3 Screenshot" class="project-image">
+                        <div class="project-info">
+                            <h3>Project 3</h3>
+                            <p>A real-time chat application built with Socket.io and Express.</p>
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <form id="contact-form" aria-label="Contact Form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" aria-label="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" aria-label="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" aria-label="Message" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+                <div id="response-message" class="message-box hidden" role="alert"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Your Name. Built with <span>&hearts;</span> using modern web technologies.</p>
+        </div>
+    </footer>
+</body>
+</html>
