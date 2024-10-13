@@ -2,160 +2,143 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Advanced modern portfolio showcasing professional projects and skills.">
-    <meta name="keywords" content="portfolio, web developer, projects, skills, frontend">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#ff4757">
-    <meta name="author" content="Your Name">
+    <title>Portofolio - Rafi Akmal Maulana</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <title>Advanced Modern Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header id="header" aria-label="Main Navigation">
-        <div class="container">
-            <h1 class="logo">My Portfolio</h1>
-            <nav aria-label="Primary Navigation">
-                <ul class="nav-list">
-                    <li><a href="#hero" class="nav-link">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-                <div class="hamburger-menu" id="hamburger" aria-label="Toggle Navigation" tabindex="0" role="button">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">RAM</div>
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
-    </header>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#portofolio">Portofolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
 
-    <main>
-        <section id="hero" class="hero-section">
-            <div class="hero-content">
-                <h2>I'm <span class="highlight">Your Name</span>, a <span class="highlight">Web Developer</span></h2>
-                <p>Creating modern, responsive, and accessible web experiences.</p>
-                <a href="#projects" class="cta-button">Explore My Work</a>
-            </div>
-        </section>
 
-        <section id="about" class="section about-section">
-            <div class="container">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <div class="about-text box">
-                        <h3>Who I Am</h3>
-                        <p>I’m a passionate web developer with a knack for creating modern web applications that deliver seamless user experiences. My journey in web development began in [Year], and since then, I have honed my skills in various technologies.</p>
-                        <p>With a focus on responsive design and user-centered interfaces, I strive to build applications that are not only functional but also visually appealing.</p>
-                    </div>
-        
-                    <div class="about-skills box">
-                        <h3>My Skills</h3>
-                        <ul class="skill-list">
-                            <li>
-                                <i class="icon-html"></i>
-                                <span>HTML5 & CSS3</span>
-                            </li>
-                            <li>
-                                <i class="icon-js"></i>
-                                <span>JavaScript (ES6+)</span>
-                            </li>
-                            <li>
-                                <i class="icon-react"></i>
-                                <span>React & Vue.js</span>
-                            </li>
-                            <li>
-                                <i class="icon-node"></i>
-                                <span>Node.js & Express</span>
-                            </li>
-                            <li>
-                                <i class="icon-design"></i>
-                                <span>Responsive Web Design</span>
-                            </li>
-                            <li>
-                                <i class="icon-ux"></i>
-                                <span>UI/UX Principles</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-        
-                <div class="experience-education">
-                    <div class="experience-item box">
-                        <h3>Experience</h3>
-                        <p><strong>Job Title</strong> at Company Name (Year - Year)</p>
-                        <p>Brief description of your role and achievements.</p>
-                    </div>
-        
-                    <div class="education-item box">
-                        <h3>Education</h3>
-                        <p><strong>Degree</strong> in Field of Study at University Name (Year)</p>
-                        <p>Brief description of your studies and relevant projects.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-
-        <section id="projects" class="section projects-section">
-            <div class="container">
-                <h2>Recent Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card" tabindex="0">
-                        <img src="project1.jpg" alt="Project 1 Screenshot" class="project-image">
-                        <div class="project-info">
-                            <h3>Project 1</h3>
-                            <p>A modern e-commerce platform built with React and Node.js.</p>
-                            <a href="#" class="project-link">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-card" tabindex="0">
-                        <img src="project2.jpg" alt="Project 2 Screenshot" class="project-image">
-                        <div class="project-info">
-                            <h3>Project 2</h3>
-                            <p>A portfolio website using Vue.js and Tailwind CSS.</p>
-                            <a href="#" class="project-link">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-card" tabindex="0">
-                        <img src="project3.jpg" alt="Project 3 Screenshot" class="project-image">
-                        <div class="project-info">
-                            <h3>Project 3</h3>
-                            <p>A real-time chat application built with Socket.io and Express.</p>
-                            <a href="#" class="project-link">View Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section contact-section">
-            <div class="container">
-                <h2>Contact Me</h2>
-                <form id="contact-form" aria-label="Contact Form">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="Your Name" aria-label="Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Your Email" aria-label="Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" placeholder="Your Message" aria-label="Message" required></textarea>
-                    </div>
-                    <button type="submit" class="cta-button">Send Message</button>
-                </form>
-                <div id="response-message" class="message-box hidden" role="alert"></div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Your Name. Built with <span>&hearts;</span> using modern web technologies.</p>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Halo! <span>Saya</span><br> Rafi Akmal Maulana</h1>
+            <p>Saya ingin menjadi Data Scientist dan Front-End Web Developer.</p>
+            <button class="hero-btn" onclick="scrollToContact()">Hubungi Saya</button>
         </div>
+        <div class="hero-img">
+            <img src="assets/gojo.jpeg" >
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>Tentang Saya</h2>
+        <div class="about-container">
+            <div class="about-content">
+                <h3>Saya Seorang Mahasiswa Informatika</h3>
+                <p>Hai namaku Rafi Akmal Maulana, aku seorang mahasiswa tingkat akhir (semester 8) di UKSW jurusan Teknik Informatika yang memiliki keahlian tentang Data Science, Data Analyst, dan Juga Front-End Web Developer.</p>
+                <p>Saya juga memiliki keinginan kuat untuk berkontribusi pada proyek-proyek menarik yang memberikan dampak positif bagi penggunanya dan Saya juga tertarik untuk mempelajari hal dan teknologi yang baru untuk menambah wawasan saya.</p>
+            </div>
+            <div class="about-img">
+                <img src="assets/gojo.jpeg" >
+            </div>
+        </div>
+        
+        <!-- Skills Section -->
+        <div class="skills">
+            <h3>Keterampilan Saya</h3>
+            <div class="skills-container">
+                <div class="skill-item">
+                    <h4>HTML / CSS</h4>
+                </div>
+                <div class="skill-item">
+                    <h4>Python</h4>
+                </div>
+                <div class="skill-item">
+                    <h4>JavaScript</h4>
+                </div>
+                <div class="skill-item">
+                    <h4>SQL</h4>
+                </div>
+                <div class="skill-item">
+                    <h4>Java</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Portfolio Section -->
+    <section id="portofolio" class="portfolio">
+        <h2>Portofolio Saya</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <a href="https://rafiakmaaalz.github.io/Mini-Portofolio/" target="_blank">
+                    <img src="assets/project1.png" alt="Project 1">
+                    <h3>Mini Portofolio</h3>
+                    <p>Mini course task by RevoU membuat mini project berupa web personal portofolio menggunakan HTML, CSS, dan JavaScript.</p>
+                </a>
+                <a href="https://github.com/rafiakmaaalz/Mini-Portofolio" class="repo-link" target="_blank">Akses Repository</a>
+            </div>
+            <div class="portfolio-item">
+                <a href="https://identifikasi-stunting-uzzcqwebkwpmrs4vv7uehs.streamlit.app/" target="_blank">
+                    <img src="assets/project2.png" alt="Project 2">
+                    <h3>Website Identifikasi Stunting</h3>
+                    <p>Tugas Akhir berupa website sederhana identifikasi stunting berbasis Streamlit Python menggunakan machine learning dengan algoritma Naive Bayes classifier.</p>
+                </a>
+                <a href="https://github.com/rafiakmaaalz/Identifikasi-Stunting" class="repo-link" target="_blank">Akses Repository</a>
+            </div>
+            <div class="portfolio-item">
+                <a href="https://github.com/rafiakmaaalz/Titanic-MachineLearning" target="_blank">
+                    <img src="assets/project3.png" alt="Project 3">
+                    <h3>Machine Learning Titanic Dataset</h3>
+                    <p>Mini project task Digital Skill Fair 31 - Data Science by Dibimbing.id berupa machine learning sederhana dengan dataset Titanic.</p>
+                </a>
+                <a href="https://github.com/rafiakmaaalz/Titanic-MachineLearning" class="repo-link" target="_blank">Akses Repository</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Hubungi Saya</h2>
+        <form class="contact-form">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan Nama Anda" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan Email Anda" required>
+
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+
+            <button type="submit">Kirim Pesan</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <h3>Ikuti Saya</h3>
+            <ul class="social-links-list">
+                <li><a href="#">Instagram</a></li>
+                <li><a href="https://linkedin.com/in/rafiakmalmaulana" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/rafiakmaaalz" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+        <p>&copy; Rafi Akmal Maulana. Personal Portofolio.</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

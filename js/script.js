@@ -1,66 +1,51 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Smooth Scroll Functionality
-    const navLinks = document.querySelectorAll(".nav-link");
-    navLinks.forEach(link => {
-        link.addEventListener("click", e => {
-            e.preventDefault();
-            const target = document.querySelector(link.getAttribute("href"));
-            target.scrollIntoView({ behavior: "smooth" });
-        });
-    });
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
 
-    // Hamburger Menu Toggle
-    const hamburger = document.getElementById("hamburger");
-    const navMenu = document.querySelector("nav ul");
-
-    hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-    });
-
-    // Intersection Observer for Animating Sections on Scroll
-    const sections = document.querySelectorAll(".section");
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("fade-in");
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        root: null,
-        threshold: 0.1,
-    });
-
-    sections.forEach(section => observer.observe(section));
-
-    // Asynchronous Form Submission
-    const form = document.getElementById("contact-form");
-    const responseMessage = document.getElementById("response-message");
-
-    form.addEventListener("submit", async e => {
-        e.preventDefault();
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
-
-        try {
-            const response = await fetch("/submit-form", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
-            });
-
-            if (response.ok) {
-                responseMessage.classList.remove("hidden");
-                responseMessage.textContent = "Thank you for reaching out!";
-                form.reset();
-            } else {
-                throw new Error("Form submission failed");
-            }
-        } catch (error) {
-            responseMessage.classList.remove("hidden");
-            responseMessage.textContent = "An error occurred. Please try again.";
-        }
-    });
+// Toggle the active class on the nav-links when the hamburger is clicked
+hamburger.addEventListener('click', function () {
+    navLinks.classList.toggle('active');
 });
+
+// Smooth scroll for navigation links
+const links = document.querySelectorAll('.nav-links a');
+
+for (const link of links) {
+    link.addEventListener('click', smoothScroll);
+}
+
+function smoothScroll(event) {
+    event.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+    window.scrollTo({
+        top: targetElement.offsetTop - 50,
+        behavior: 'smooth'
+    });
+}
+
+// Scroll to contact form when clicking 'Hubungi Saya' button
+function scrollToContact() {
+    const contactSection = document.getElementById('contact');
+    window.scrollTo({
+        top: contactSection.offsetTop - 50,
+        behavior: 'smooth'
+    });
+}
+
+// Form submission handling
+const form = document.querySelector('.contact-form');
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (name && email && message) {
+        alert('Terima kasih, ' + name + '! Pesan Anda telah terkirim.');
+        form.reset(); // Reset form after submission
+    } else {
+        alert('Mohon isi semua kolom.');
+    }
+});
+
+
