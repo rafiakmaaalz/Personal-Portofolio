@@ -157,8 +157,15 @@ a:hover {
     color: #555;
 }
 
+.about-img {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+}
+
 .about-img img {
-    width: 300px; /* Ubah ukuran lebar */
+    width: 100%; /* Ubah ukuran lebar */
     height: 300px; /* Ubah ukuran tinggi */
     object-fit: cover;
     border-radius: 50%;
